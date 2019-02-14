@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+  <POU Name="PRG_PROTOTYPE" Id="{eb501625-f746-47fa-ac8c-3ae898c079cf}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_PROTOTYPE
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//gauges
+MR2K3_GPI_1(PG=>);
+TV2K4_GPI_1(PG=>);
+MR1K4_GPI_1(PG=>);
+
+MR2K3_GCC_1(PG:=MR2K3_GPI_1.PG);
+TV2K4_GCC_1(PG:=TV2K4_GPI_1.PG);
+MR1K4_GCC_1(PG:=MR1K4_GPI_1.PG);
+
+//valves
+TV2K4_VGC_1(i_stUSG := MR2K3_GCC_1.IG, 
+			i_stDSG:= TV2K4_GCC_1.IG, 
+			i_xDis_DPIlk := TRUE, 
+			i_xEPS_OK := TRUE, 
+			i_xPMPS_OK := TRUE, 
+			i_xExt_OK := TRUE, 
+			i_xOverrideMode := xSystemOverrideMode);
+			
+MR1K4_VGC_1(i_stUSG := TV2K4_GCC_1.IG, 
+			i_stDSG:= MR1K4_GCC_1.IG, 
+			i_xDis_DPIlk := TRUE, 
+			i_xEPS_OK := TRUE, 
+			i_xPMPS_OK := TRUE, 
+			i_xExt_OK := TRUE, 
+			i_xOverrideMode := xSystemOverrideMode);
+			
+//pumps
+TV2KO_PIP_1(i_stGauge:= TV2K4_GCC_1.IG);]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_PROTOTYPE">
+      <LineId Id="28" Count="0" />
+      <LineId Id="35" Count="3" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="39" Count="1" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="15" Count="2" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="18" Count="1" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="21" Count="5" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="31" Count="1" />
+      <LineId Id="41" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

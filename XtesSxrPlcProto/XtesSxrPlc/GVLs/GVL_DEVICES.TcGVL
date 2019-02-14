@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+  <GVL Name="GVL_DEVICES" Id="{645f8313-a8d0-4893-95f4-e29e82eb6022}">
+    <Declaration><![CDATA[VAR_GLOBAL
+	
+// gauges
+	{attribute 'pytmc' := ' pv: MR2K3_GPI_1 '}
+	MR2K3_GPI_1 : FB_MKS275;
+	{attribute 'pytmc' := ' pv: TV2K4_GPI_1 '}
+	TV2K4_GPI_1 : FB_MKS275;
+	{attribute 'pytmc' := ' pv: MR1K4_GPI_1 '}
+	MR1K4_GPI_1 : FB_MKS275;
+	{attribute 'pytmc' := ' pv: MR2K3_GCC_1 '}
+	MR2K3_GCC_1 : FB_MKS500;
+	{attribute 'pytmc' := ' pv: TV2K4_GCC_1 '}
+	TV2K4_GCC_1 : FB_MKS500;
+	{attribute 'pytmc' := ' pv: MR1K4_GCC_1 '}
+	MR1K4_GCC_1 : FB_MKS500;
+
+//valves
+	{attribute 'pytmc' := ' pv: TV2K4_VGC_1 '}
+	TV2K4_VGC_1 : FB_VGC; // VV9S
+	{attribute 'pytmc' := ' pv: MR1K4_VGC_1'}
+	MR1K4_VGC_1 : FB_VGC; // VV10S
+	
+//pumps
+	{attribute 'pytmc' := ' pv: TV2KO_PIP_1 '}
+	TV2KO_PIP_1 : FB_PIP_Gamma;
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

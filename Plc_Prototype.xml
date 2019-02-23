@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project>
+ <Name>CPU03</Name>
+ <Author>IEUSER</Author>
+ <Description>XtesSxrPlc</Description>
+ <ChangeDate>2019-02-23T18:07:47Z</ChangeDate>
+ <CPUs>
+  <CPU>
+   <Name><![CDATA[CPU1]]></Name>
+   <Interfaces>
+    <Interface>
+     <Name><![CDATA[=+-AuxPS1-CPU/EtherCAT1]]></Name>
+     <Comment/>
+     <Type>ETHERCATPROT</Type>
+     <ChannelNo>1</ChannelNo>
+     <Boxes>
+      <Box>
+       <Name><![CDATA[=+-AuxPS1]]></Name>
+       <Comment/>
+       <Type>EK1100</Type>
+       <BoxNo>0</BoxNo>
+      </Box>
+      <Box>
+       <Name><![CDATA[=+-DO1]]></Name>
+       <Comment/>
+       <Type>EL2794</Type>
+       <BoxNo>1</BoxNo>
+       <Variables>
+        <Variable>
+         <Name><![CDATA[GVL_DEVICES.TV2KO_PIP_1.q_xHVEna_DO]]></Name>
+         <Comment><![CDATA[Digital Input 4]]></Comment>
+         <IsInput>false</IsInput>
+         <IoName><![CDATA[Output]]></IoName>
+         <IoGroup>Channel 1</IoGroup>
+         <IoDataType>BOOL</IoDataType>
+        </Variable>
+       </Variables>
+      </Box>
+      <Box>
+       <Name><![CDATA[=+-DI1]]></Name>
+       <Comment/>
+       <Type>EL1004</Type>
+       <BoxNo>2</BoxNo>
+       <Variables>
+        <Variable>
+         <Name><![CDATA[GVL_DEVICES.TV2KO_PIP_1.i_xSP_DI]]></Name>
+         <Comment><![CDATA[Digital Out 4]]></Comment>
+         <IsInput>true</IsInput>
+         <IoName><![CDATA[Input]]></IoName>
+         <IoGroup>Channel 4</IoGroup>
+         <IoDataType>BOOL</IoDataType>
+        </Variable>
+       </Variables>
+      </Box>
+      <Box>
+       <Name><![CDATA[=+-A1]]></Name>
+       <Comment/>
+       <Type>EP2338-0002</Type>
+       <BoxNo>3</BoxNo>
+       <Variables>
+        <Variable>
+         <Name><![CDATA[GVL_DEVICES.MR1K4_VGC_1.q_xCLS_DO]]></Name>
+         <Comment><![CDATA[Normally open]]></Comment>
+         <IsInput>false</IsInput>
+         <IoName><![CDATA[Output]]></IoName>
+         <IoGroup>Channel 10</IoGroup>
+         <IoDataType>BOOL</IoDataType>
+        </Variable>
+        <Variable>
+         <Name><![CDATA[GVL_DEVICES.TV2K4_VGC_1.q_xOPN_DO]]></Name>
+         <Comment><![CDATA[Normally open]]></Comment>
+         <IsInput>false</IsInput>
+         <IoName><![CDATA[Output]]></IoName>
+         <IoGroup>Channel 13</IoGroup>
+         <IoDataType>BOOL</IoDataType>
+        </Variable>
+        <Variable>
+         <Name><![CDATA[GVL_DEVICES.TV2K4_VGC_1.q_xCLS_DO]]></Name>
+         <Comment><![CDATA[Normally open]]></Comment>
+         <IsInput>false</IsInput>
+         <IoName><![CDATA[Output]]></IoName>
+         <IoGroup>Channel 14</IoGroup>
+         <IoDataType>BOOL</IoDataType>
+        </Variable>
+        <Variable>
+         <Name><![CDATA[GVL_DEVICES.MR1K4_VGC_1.i_xOpnLS]]></Name>
+         <Comment><![CDATA[Normally Closed]]></Comment>
+         <IsInput>true</IsInput>
+         <IoName><![CDATA[Input]]></IoName>
+         <IoGroup>Channel 3</IoGroup>
+         <IoDataType>BOOL</IoDataType>
+        </Variable>
+        <Variable>
+         <Name><![CDATA[GVL_DEVICES.MR1K4_VGC_1.i_xClsLS]]></Name>
+         <Comment><![CDATA[Normally Closed]]></Comment>
+         <IsInput>true</IsInput>
+         <IoName><![CDATA[Input]]></IoName>
+         <IoGroup>Channel 4</IoGroup>
+         <IoDataType>BOOL</IoDataType>
+        </Variable>
+        <Variable>
+         <Name><![CDATA[GVL_DEVICES.TV2K4_VGC_1.i_xOpnLS]]></Name>
+         <Comment><![CDATA[Normally Closed]]></Comment>
+         <IsInput>true</IsInput>
+         <IoName><![CDATA[Input]]></IoName>
+         <IoGroup>Channel 7</IoGroup>
+         <IoDataType>BOOL</IoDataType>
+        </Variable>
+        <Variable>
+         <Name><![CDATA[GVL_DEVICES.TV2K4_VGC_1.i_xClsLS]]></Name>
+         <Comment><![CDATA[Normally Closed]]></Comment>
+         <IsInput>true</IsInput>
+         <IoName><![CDATA[Input]]></IoName>
+         <IoGroup>Channel 8</IoGroup>
+         <IoDataType>BOOL</IoDataType>
+        </Variable>
+        <Variable>
+         <Name><![CDATA[GVL_DEVICES.MR1K4_VGC_1.q_xOPN_DO]]></Name>
+         <Comment><![CDATA[Normally open]]></Comment>
+         <IsInput>false</IsInput>
+         <IoName><![CDATA[Output]]></IoName>
+         <IoGroup>Channel 9</IoGroup>
+         <IoDataType>BOOL</IoDataType>
+        </Variable>
+       </Variables>
+      </Box>
+      <Box>
+       <Name><![CDATA[=+-A2]]></Name>
+       <Comment/>
+       <Type>EP3174-0002</Type>
+       <BoxNo>4</BoxNo>
+       <Variables>
+        <Variable>
+         <Name><![CDATA[GVL_DEVICES.TV2K4_GCC_1.i_iPRESS_R]]></Name>
+         <IsInput>true</IsInput>
+         <IoName><![CDATA[Value]]></IoName>
+         <IoGroup>AI Standard Channel 1</IoGroup>
+         <IoDataType>INT</IoDataType>
+        </Variable>
+        <Variable>
+         <Name><![CDATA[GVL_DEVICES.TV2K4_GPI_1.i_iPRESS_R]]></Name>
+         <Comment><![CDATA[Press 0-10V]]></Comment>
+         <IsInput>true</IsInput>
+         <IoName><![CDATA[Value]]></IoName>
+         <IoGroup>AI Standard Channel 4</IoGroup>
+         <IoDataType>INT</IoDataType>
+        </Variable>
+       </Variables>
+      </Box>
+      <Box>
+       <Name><![CDATA[=+-A3]]></Name>
+       <Comment/>
+       <Type>EP2624-0002</Type>
+       <BoxNo>5</BoxNo>
+       <Variables>
+        <Variable>
+         <Name><![CDATA[GVL_DEVICES.TV2K4_GCC_1.q_xHV_DIS]]></Name>
+         <Comment><![CDATA[High Voltage Enable]]></Comment>
+         <IsInput>false</IsInput>
+         <IoName><![CDATA[Output]]></IoName>
+         <IoGroup>Channel 1</IoGroup>
+         <IoDataType>BOOL</IoDataType>
+        </Variable>
+       </Variables>
+      </Box>
+     </Boxes>
+    </Interface>
+   </Interfaces>
+  </CPU>
+ </CPUs>
+</Project>

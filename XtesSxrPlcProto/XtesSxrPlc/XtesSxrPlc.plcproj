@@ -36,6 +36,7 @@
   <ItemGroup>
     <Folder Include="DUTs" />
     <Folder Include="GVLs" />
+    <Folder Include="GVLs\XCAD_Interface_GVL" />
     <Folder Include="VISUs" />
     <Folder Include="POUs" />
   </ItemGroup>
